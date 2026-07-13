@@ -1,0 +1,440 @@
+/* ============================================
+   Montiq Tech — Minimalist Landing Page
+   ============================================ */
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #263B28;
+  --dark: #212121;
+  --gray: #636261;
+  --light: #E3DFD8;
+  --accent: #C4591F;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--dark);
+  background: var(--light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.hero .btn-outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero .btn-outline:hover {
+  background: #fff;
+  color: var(--dark);
+  border-color: #fff;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: #1d2e20;
+  border-color: #1d2e20;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark);
+  border-color: var(--dark);
+}
+
+.btn-outline:hover {
+  background: var(--dark);
+  color: #fff;
+}
+
+/* --- Hero --- */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    url('src/media/hero-bg.jpg')
+    center center / cover no-repeat;
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 33, 33, 0.5) 0%,
+    rgba(33, 33, 33, 0.2) 50%,
+    #E3DFD8 100%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 720px;
+  padding: 80px 0 120px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 580px;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+/* --- Sections --- */
+section {
+  padding: 96px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--gray);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto 56px;
+}
+
+/* --- Services Cards --- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 32px;
+  transition: all 0.3s ease;
+  border: 1px solid #d4d0c8;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  border-color: #c9c4b9;
+}
+
+.card-icon {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.card p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* --- Portfolio --- */
+.portfolio {
+  background: #f5f2ed;
+}
+
+.portfolio-single {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.portfolio-featured {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #d4d0c8;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio-featured:hover {
+  border-color: #c9c4b9;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+}
+
+.pf-content {
+  flex: 1;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pf-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.pf-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.pf-content p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.pf-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: color 0.2s;
+}
+
+.pf-link:hover {
+  color: var(--accent);
+}
+
+.pf-image {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: var(--light);
+}
+
+.browser-mockup {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background: #d4d0c8;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #d4d0c8;
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c9c4b9;
+}
+
+.browser-dot:nth-child(1) { background: #f87171; }
+.browser-dot:nth-child(2) { background: #fbbf24; }
+.browser-dot:nth-child(3) { background: #34d399; }
+
+.browser-content {
+  aspect-ratio: 16 / 10;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* --- Contato CTA --- */
+.contato {
+  background: #f5f2ed;
+}
+
+.contato-cta {
+  text-align: center;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  border-color: #25D366;
+  font-size: 1.05rem;
+  padding: 16px 36px;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+  border-color: #1da851;
+}
+
+.contato-obs {
+  margin-top: 16px;
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+/* --- WhatsApp Floating --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  transition: all 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+}
+
+/* --- Footer --- */
+.footer {
+  padding: 32px 0;
+  border-top: 1px solid #d4d0c8;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text {
+    padding: 40px 0 80px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-featured {
+    flex-direction: column;
+  }
+
+  .pf-image {
+    width: 100%;
+    min-height: 180px;
+    order: -1;
+  }
+
+  section {
+    padding: 64px 0;
+  }
+}
