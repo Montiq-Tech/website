@@ -234,6 +234,46 @@ section {
   line-height: 1.65;
 }
 
+/* --- Por que ter um site --- */
+.porque {
+  background: #fff;
+}
+
+.porque-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.porque-item {
+  border-top: 2px solid #e3dfd8;
+  padding-top: 20px;
+}
+
+.porque-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.porque-item h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.porque-item p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
 /* --- Portfolio --- */
 .portfolio {
   background: #f5f2ed;
@@ -422,6 +462,11 @@ section {
 
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .porque-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .portfolio-featured {
