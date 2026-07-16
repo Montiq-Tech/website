@@ -18,6 +18,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8P91CJ4GYY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8P91CJ4GYY');
+  </script>
   <script defer>
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
@@ -232,7 +240,7 @@
         </details>
         <details class="faq-item">
           <summary>Como funciona o pagamento?</summary>
-          <p>Pedimos 50% no início e 50% na entrega. Aceitamos PIX, transferência e cartão de crédito. Para valores acima de R$ 2.000, parcelamos em até 6x com juros a combinar.</p>
+          <p>O valor é pago na entrega. Aceitamos PIX, transferência e cartão de crédito. Para valores acima de R$ 2.000, parcelamos em até 6x com juros a combinar.</p>
         </details>
       </div>
     </div>
@@ -242,7 +250,7 @@
   <footer class="footer">
     <div class="container">
       <img src="src/media/icon.png" alt="Montiq Tech" class="footer-logo" />
-      <p>&copy; © 2026 Maicon Vieira • Montiq Tech. Todos os direitos reservados.</p>
+      <p>&copy; 2026 Maicon Vieira • Montiq Tech. Todos os direitos reservados.</p>
     </div>
   </footer>
 
@@ -258,10 +266,12 @@
     })
 
     function montarPainel(tipo) {
+      gtag('event', 'simulador_tipo', { tipo })
       const painel = document.getElementById('sim-painel')
       const config = document.getElementById('sim-config')
       const valor = document.getElementById('sim-valor')
-      const zap = document.getElementById('sim-zap')
+    const zap = document.getElementById('sim-zap')
+    zap.addEventListener('click', () => gtag('event', 'simulador_solicitar_orcamento'))
       painel.style.display = 'block'
 
       let html = ''
@@ -311,6 +321,7 @@
     }
 
     function atualizarLanding(v) {
+      gtag('event', 'simulador_ajuste', { tipo: 'landing', valor: v })
       v = parseInt(v)
       const label = document.getElementById('lp-label')
       const nome = v <= 300 ? 'Simples' : v <= 450 ? 'Padrão' : 'Premium'
@@ -320,6 +331,7 @@
     }
 
     function atualizarInst(v) {
+      gtag('event', 'simulador_ajuste', { tipo: 'institucional', paginas: v })
       v = parseInt(v)
       document.getElementById('inst-label').textContent = v
       const total = 550 + v * 55
@@ -330,6 +342,7 @@
     function atualizarSis() {
       let total = 1500
       document.querySelectorAll('.sim-checks input:checked').forEach(c => total += parseInt(c.dataset.valor))
+      gtag('event', 'simulador_ajuste', { tipo: 'sistema', modulos: [...document.querySelectorAll('.sim-checks input:checked')].length, total })
       mostrarValor(total)
       const mods = [...document.querySelectorAll('.sim-checks input:checked')].map(c => c.parentElement.textContent.trim()).join(', ')
       zap.href = `https://wa.me/5543996045936?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20um%20Sistema%20de%20Gest%C3%A3o.`
