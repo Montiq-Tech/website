@@ -632,6 +632,22 @@ section {
   font-size: 0.85rem;
 }
 
+.contato-email {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.contato-email a {
+  color: var(--primary);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contato-email a:hover {
+  color: var(--accent);
+}
+
 /* --- WhatsApp Floating --- */
 .whatsapp-float {
   position: fixed;
@@ -666,7 +682,27 @@ section {
 .footer-logo {
   height: 28px;
   width: auto;
-  margin: 0 auto 12px;
+  margin: 0 auto 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--gray);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
 }
 
 /* --- Responsive --- */
