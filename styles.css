@@ -496,6 +496,13 @@ section {
   background: #f5f2ed;
 }
 
+.portfolio-list {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 32px;
+}
+
 .portfolio-single {
   max-width: 720px;
   margin: 0 auto;
@@ -540,6 +547,15 @@ section {
   color: var(--dark);
   margin-bottom: 10px;
   letter-spacing: -0.01em;
+}
+
+.pf-titulo-link {
+  color: var(--dark);
+  transition: color 0.2s;
+}
+
+.pf-titulo-link:hover {
+  color: var(--primary);
 }
 
 .pf-content p {

@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Montiq Tech — Sites e Sistemas Sob Medida</title>
-  <meta name="description" content="Criamos landing pages minimalistas, sites rápidos e sistemas sob medida para sua empresa crescer." />
-  <meta property="og:title" content="Montiq Tech — Sites e Sistemas Sob Medida" />
+  <meta name="robots" content="index, follow" />
+  <title>Criação de Sites e Landing Pages | Montiq Tech</title>
+  <meta name="description" content="Criamos landing pages, sites institucionais e sistemas web para pequenos negócios. Preços a partir de R$ 150. Atendimento rápido e suporte completo." />
+  <meta property="og:title" content="Criação de Sites e Landing Pages | Montiq Tech" />
   <meta property="og:description" content="Landing pages, sites rápidos e sistemas sob medida para sua empresa crescer. Simule seu orçamento agora." />
   <meta property="og:url" content="https://montiq.tech" />
   <meta property="og:type" content="website" />
@@ -33,6 +34,17 @@
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
     })
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Montiq Tech",
+    "url": "https://montiq.tech",
+    "description": "Criação de landing pages, sites institucionais e sistemas web sob medida para pequenos negócios.",
+    "priceRange": "R$ 150 - R$ 2.000",
+    "areaServed": "Brasil"
+  }
   </script>
 </head>
 <body>
@@ -136,8 +148,26 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <h2 class="section-title fade-up">Vitrine</h2>
-      <p class="section-sub fade-up">Conheça um dos projetos que entregamos.</p>
-      <div class="portfolio-single fade-up">
+      <p class="section-sub fade-up">Conheça alguns dos projetos que entregamos.</p>
+      <div class="portfolio-list fade-up">
+        <div class="portfolio-featured">
+          <div class="pf-content">
+            <span class="pf-tag">Sistema SaaS</span>
+            <h3><a href="https://bookcase.montiqtech.com.br" class="pf-titulo-link">BookCase</a></h3>
+            <p>Sistema de gestão para sebos e livrarias: controle de estoque, caixa integrado e loja online própria. Assinatura acessível com 30 dias de teste grátis.</p>
+            <a href="https://bookcase.montiqtech.com.br" class="pf-link" target="_blank">Saber mais →</a>
+          </div>
+          <div class="pf-image">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+              </div>
+              <div class="browser-content" style="background-image: url('src/media/bookcase.png');" role="img" aria-label="Preview do sistema BookCase"></div>
+            </div>
+          </div>
+        </div>
         <div class="portfolio-featured">
           <div class="pf-content">
             <span class="pf-tag">Landing Page</span>
@@ -152,7 +182,7 @@
                 <span class="browser-dot"></span>
                 <span class="browser-dot"></span>
               </div>
-              <div class="browser-content" style="background-image: url('src/media/macielmorais.png');"></div>
+              <div class="browser-content" style="background-image: url('src/media/macielmorais.png');" role="img" aria-label="Preview do site Maciel & Morais Advocacia"></div>
             </div>
           </div>
         </div>
