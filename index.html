@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <title>Criação de Sites e Landing Pages | Montiq Tech</title>
-  <meta name="description" content="Criamos landing pages, sites institucionais e sistemas web para pequenos negócios. Preços a partir de R$ 150. Atendimento rápido e suporte completo." />
+  <meta name="description" content="Criamos landing pages, sites institucionais e sistemas web para pequenos negócios. Preços a partir de R$ 250. Atendimento rápido e suporte completo." />
   <meta property="og:title" content="Criação de Sites e Landing Pages | Montiq Tech" />
   <meta property="og:description" content="Landing pages, sites rápidos e sistemas sob medida para sua empresa crescer. Simule seu orçamento agora." />
   <meta property="og:url" content="https://montiq.tech" />
@@ -42,7 +42,7 @@
     "name": "Montiq Tech",
     "url": "https://montiq.tech",
     "description": "Criação de landing pages, sites institucionais e sistemas web sob medida para pequenos negócios.",
-    "priceRange": "R$ 150 - R$ 2.000",
+    "priceRange": "R$ 250 - R$ 2.000",
     "areaServed": "Brasil"
   }
   </script>
@@ -153,9 +153,9 @@
         <div class="portfolio-featured">
           <div class="pf-content">
             <span class="pf-tag">Sistema SaaS</span>
-            <h3><a href="https://bookcase.montiqtech.com.br" class="pf-titulo-link">BookCase</a></h3>
+            <h3><a href="bookcase.html" class="pf-titulo-link">BookCase</a></h3>
             <p>Sistema de gestão para sebos e livrarias: controle de estoque, caixa integrado e loja online própria. Assinatura acessível com 30 dias de teste grátis.</p>
-            <a href="https://bookcase.montiqtech.com.br" class="pf-link" target="_blank">Saber mais →</a>
+            <a href="bookcase.html" class="pf-link" target="_blank">Saber mais →</a>
           </div>
           <div class="pf-image">
             <div class="browser-mockup">
@@ -200,7 +200,7 @@
         <button class="sim-btn" data-tipo="landing">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/></svg>
           <span>Landing Page</span>
-          <small>A partir de R$ 150</small>
+          <small>A partir de R$ 250</small>
         </button>
         <button class="sim-btn" data-tipo="institucional">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
@@ -296,7 +296,7 @@
   </footer>
 
   <script>
-    const preco = { landing: 150, institucional: 250, sistema: 1500 }
+    const preco = { landing: 250, institucional: 250, sistema: 1500 }
 
     document.querySelectorAll('.sim-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -320,7 +320,7 @@
         html = `
           <div class="sim-linha">
             <label>Complexidade: <strong id="lp-label">Profissional</strong></label>
-                        <input type="range" min="150" max="500" value="350" step="10" id="lp-range"
+                        <input type="range" min="250" max="500" value="350" step="10" id="lp-range"
               oninput="atualizarLanding(this.value)" class="sim-range" />
             <div class="sim-range-rotulos">
               <span>Simples</span>
